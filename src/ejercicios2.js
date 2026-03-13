@@ -50,7 +50,25 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) {
 	// - Si es miembro O es fin de semana: 15% de descuento
 	// - Si no cumple ninguna: sin descuento (0%)
 	// Devuelve el precio final después de aplicar el descuento.
+	// Tu código:--
+	// Reglas de descuento:
+	// - Si es miembro Y es fin de semana: 30% de descuento
+	// - Si es miembro O es fin de semana: 15% de descuento
+	// - Si no cumple ninguna: sin descuento (0%)
+	// Devuelve el precio final después de aplicar el descuento.
 	// Tu código:
+	let descuento = 0;
+
+	if (esMiembro && esFinDeSemana) {
+		descuento = 0.30;
+	} 
+	else if (esMiembro || esFinDeSemana) {
+		descuento = 0.15;
+	}
+
+	let precioFinal = precio - (precio * descuento);
+
+	return precioFinal;
 }
 
 // Test 4:
